@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+
+
+actor "Manager Scolaire" as Manager
+rectangle pkg_it_wave {
+
+  usecase "Suivi des présences en temps réel" as uc1
+
+
+}
+
+Manager -- uc1
+
+
+
+@enduml

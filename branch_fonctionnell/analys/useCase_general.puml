@@ -7,7 +7,6 @@ actor "Organisateur" as Organisateur
 actor "Manager Scolaire" as Manager
 rectangle pkg_it_wave {
   usecase "Inscription des participants" as uc1
-  usecase "Inscription manuelle d'un participant" as uc2
   usecase "Consulter le programme de l'événement" as uc3
   usecase "Suivi des présences en temps réel" as uc4
 
@@ -16,13 +15,11 @@ rectangle pkg_it_wave {
 ' Participant use cases
 
 Participant -- uc1
-Participant -- uc2
 Participant -- uc3
 
 ' Organisateur use cases
 Organisateur -- uc1
 Organisateur -- uc4
-Organisateur -- uc2
 
 ' Manager Scolaire use cases
 Manager -- uc4
