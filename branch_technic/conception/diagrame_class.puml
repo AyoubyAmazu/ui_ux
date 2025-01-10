@@ -1,0 +1,25 @@
+@startuml
+class ManagerScolaire {
+    + superviserParticipants()
+    + suivrePrésences()
+}
+
+class Participant {
+    + s'inscrire()
+    + consulterInformations()
+}
+
+class Organisateur {
+    + enregistrerPrésences()
+    + coordonnerÉquipes()
+}
+
+class GestionEventITWave {
+    + enregistrerParticipant(Participant)
+    + suivrePrésence(Participant)
+}
+
+ManagerScolaire "1" --> "1..*" GestionEventITWave
+Participant "1..*" --> "1" GestionEventITWave
+Organisateur "1..*" --> "1" GestionEventITWave
+@enduml
