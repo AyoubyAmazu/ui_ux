@@ -36,7 +36,6 @@ class SolitionSeeder extends Seeder
             ['name' => 'IT Wave 2025', 'description' => 'A technology-focused event.', 'start_date' => '2025-02-01', 'end_date' => '2025-02-03'],
             ['name' => 'Coding Marathon', 'description' => 'A 24-hour coding challenge.', 'start_date' => '2025-03-10', 'end_date' => '2025-03-11'],
         ]);
-
         // Add Event Participants
         DB::table('event_participants')->insert([
             ['event_id' => 1, 'participant_id' => 1, 'presence_status' => 'present'],
