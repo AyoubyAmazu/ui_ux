@@ -17,6 +17,7 @@ class Organisateur {
 class GestionEventITWave {
     + enregistrerParticipant(Participant)
     + suivrePrésence(Participant)
+ 
 }
 
 ManagerScolaire "1" --> "1..*" GestionEventITWave

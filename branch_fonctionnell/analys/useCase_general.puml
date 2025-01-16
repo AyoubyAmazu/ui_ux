@@ -9,7 +9,7 @@ rectangle pkg_it_wave {
   usecase "Inscription des participants" as uc1
   usecase "Consulter le programme de l'événement" as uc3
   usecase "Suivi des présences en temps réel" as uc4
-
+  usecase "Gestion des events" as uc5
 
 }
 ' Participant use cases
@@ -20,6 +20,8 @@ Participant -- uc3
 ' Organisateur use cases
 Organisateur -- uc1
 Organisateur -- uc4
+Organisateur -- uc5
+
 
 ' Manager Scolaire use cases
 Manager -- uc4

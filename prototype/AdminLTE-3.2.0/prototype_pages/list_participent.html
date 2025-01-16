@@ -110,8 +110,21 @@
                 <div class="container-fluid">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">List of Participants</h3>
+                            <h3 class="card-title">List des Participents</h3>
+                            <div class="card-tools">
+                                <div class="input-group input-group-sm" style="width: 150px;">
+                                    <select class="form-control float-right" id="yearSelect">
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <!-- Add more years as needed -->
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">
@@ -129,14 +142,14 @@
                                         <td>1</td>
                                         <td>John Doe</td>
                                         <td>john.doe@example.com</td>
-                                        <td>Event A</td>
+                                        <td>Event A,Event B</td>
                                         <td>2023-10-01</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Jane Smith</td>
                                         <td>jane.smith@example.com</td>
-                                        <td>Event B</td>
+                                        <td>Event B,Event c</td>
                                         <td>2023-10-02</td>
                                     </tr>
                                     <tr>
@@ -164,37 +177,24 @@
                                         <td>6</td>
                                         <td>Olivia Wilson</td>
                                         <td>olivia.wilson@example.com</td>
-                                        <td>Event F</td>
+                                        <td>Event E</td>
                                         <td>2023-10-06</td>
                                     </tr>
                                     <tr>
                                         <td>7</td>
                                         <td>James Taylor</td>
                                         <td>james.taylor@example.com</td>
-                                        <td>Event G</td>
+                                        <td>Event A</td>
                                         <td>2023-10-07</td>
                                     </tr>
                                     <tr>
                                         <td>8</td>
-                                        <td>Ava Martinez</td>
-                                        <td>ava.martinez@example.com</td>
-                                        <td>Event H</td>
+                                        <td>Charlotte Martinez</td>
+                                        <td>charlotte.martinez@example.com</td>
+                                        <td>Event A,Event C</td>
                                         <td>2023-10-08</td>
                                     </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>Lucas Anderson</td>
-                                        <td>lucas.anderson@example.com</td>
-                                        <td>Event I</td>
-                                        <td>2023-10-09</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Isabella Thomas</td>
-                                        <td>isabella.thomas@example.com</td>
-                                        <td>Event J</td>
-                                        <td>2023-10-10</td>
-                                    </tr>
+                                    
                                     <!-- Add more rows as needed -->
                                 </tbody>
                             </table>
@@ -241,12 +241,28 @@
     <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <script>
-      $(function () {
+        $(function (){
         $("#example1").DataTable({
-          "responsive": true, "lengthChange": false, "autoWidth": false,
-          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      });
+            "paging": true,
+            "responsive": true,
+            "lengthChange": false,
+            "buttons": ["excel", "pdf", "print"   ],
+            "searching": true,
+            "ordering": true,
+            "info": false,
+            "autoWidth": false,
+            "responsive": true,
+            "pagingType": "full_numbers",
+            "language": {
+                "paginate":
+                 {  
+                    "first": "<<",
+                    "last": ">>",
+                    "next": ">",
+                    "previous": "<"
+                }
+            }
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)')});
     </script>
 </body>
 </html>
