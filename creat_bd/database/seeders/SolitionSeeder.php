@@ -15,8 +15,10 @@ class SolitionSeeder extends Seeder
     public function run(): void
     {
         DB::table('managers')->insert([
-            ['name' => 'John Doe', 'email' => 'john.doe@example.com', 'password' => Hash::make('password')],
-            ['name' => 'Jane Smith', 'email' => 'jane.smith@example.com', 'password' => Hash::make('password')],
+            ['name' => 'ayoub amazu', 'email' => 'ayoubamazu@gmail.com', 'password' => Hash::make('password')],
+            ['name' => 'jalil betrouji', 'email' => 'jalilbetrouji@gmail.com', 'password' => Hash::make('password')],
+            ['name' => 'jalil betrouji', 'email' => 'jane.smith@gmail.com', 'password' => Hash::make('password')],
+
         ]);
 
         // Add Participants

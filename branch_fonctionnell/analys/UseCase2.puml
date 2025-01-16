@@ -7,11 +7,15 @@ actor "Manager Scolaire" as Manager
 rectangle pkg_it_wave {
 
   usecase "Suivi des présences en temps réel" as uc1
+  usecase "Gestion des organisateurs" as uc6
+
 
 
 }
 
 Manager -- uc1
+Manager -- uc6
+
 
 
 
